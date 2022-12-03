@@ -1,0 +1,18 @@
+<h2>Contatos</h2>
+<hr>
+<button class="btn btn-primary mb-2" type="button" [routerLink]="['/new']">
+    Novo Contato
+</button>
+
+<section>
+    <div *ngIf="tasks.length == 0 " class="alert alert-warning" role="alert">
+        Nenhum contato foi cadastrado ainda
+    </div>
+    <ul class="list-group" *ngIf="tasks.length > 0">
+        <li class="list-group-item" *ngFor="let task of tasks">
+            <app-task-list-item [task]="task" class="task-item"></app-task-list-item>
+
+        </li>
+
+    </ul>
+</section>

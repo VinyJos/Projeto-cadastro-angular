@@ -1,0 +1,15 @@
+header {
+    height: 70px;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.myBg {
+    background-color: rgb(204, 33, 33);
+}
+
+.myfooter {
+    margin-top: 10%;
+}

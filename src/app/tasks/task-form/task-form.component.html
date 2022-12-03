@@ -1,0 +1,21 @@
+<h2>{{title}}</h2>
+<hr>
+<section id="form" class="groupForm">
+    <form (ngSubmit)="onSubmit()" #formTask="ngForm">
+        <div class="form-group">
+            <label>Nome</label>
+            <input type="text" [(ngModel)]="task.nome" name="nome" row="2" class="form-control " id="validationCustom02" required/>
+        </div>
+        
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" [(ngModel)]="task.email" name="email" row="4" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" [(ngModel)]="task.telefone" name="telefone" row="5" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+        <button type="button" class="btn btn-secondary" [routerLink]="['']">Cancelar</button>
+    </form>
+</section>
