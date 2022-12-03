@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Task } from '../shared/task';
 import { TaskService } from '../shared/task.service';
@@ -12,11 +13,13 @@ export class TaskFormComponent implements OnInit{
   task: Task = new Task();
   title: string = 'Novo contato';
 
+  
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private taskService: TaskService
-  ) { }
+  ) {}
   
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -25,7 +28,7 @@ export class TaskFormComponent implements OnInit{
       this.title = 'Alterando Cadastro'
     }
   }
-
+  
   onSubmit(){
     this.taskService.save(this.task);
     this.router.navigate(['']);

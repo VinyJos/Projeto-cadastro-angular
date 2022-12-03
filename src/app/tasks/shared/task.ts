@@ -3,6 +3,7 @@ export class Task {
     nome!: string;
     email!: string;
     telefone!: number;
+
   
 }
 

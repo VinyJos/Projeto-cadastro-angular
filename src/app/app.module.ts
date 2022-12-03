@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormBuilder, FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,11 +14,14 @@ import { TaskFormComponent } from './tasks/task-form/task-form.component';
     TaskListComponent,
     TaskListItemComponent,
     TaskFormComponent,
+  
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,15 @@
 // Regras de negócio da aplicação.
 import { Injectable } from '@angular/core';
-import { Validators } from '@angular/forms';
 import { Task } from './task';
+import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
   tasks: Task[] = [];
+
 
   constructor() { }
 
@@ -24,6 +26,7 @@ export class TaskService {
     return task;
   }
 
+
   save(task: Task){
     if(task.id){
       const taskArr = this.getById(task.id);
@@ -31,7 +34,6 @@ export class TaskService {
       taskArr!.email = task.email;
       taskArr!.telefone = task.telefone;
       
-
     }
     else{
       let lastId = 0;
@@ -43,6 +45,7 @@ export class TaskService {
     }
 
     window.localStorage.setItem('lista-contatos', JSON.stringify(this.tasks));
+    
   }
 
   
