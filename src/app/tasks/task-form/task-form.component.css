@@ -1,4 +1,4 @@
-.groupForm{
+/* .groupForm{
     display: flex;
     justify-content: center;
     margin-top: 8%;
@@ -8,4 +8,23 @@
 
 .form-control{
     display: inline;
+} */
+
+.mensagem {
+    font-style: italic;
+    font-size: 13px;
+    color: darkgrey;
 }
+
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948;
+}
+
+.ng-valid:not(form){
+    border-left: 5px solid #a94442;  
+}
+
+/* .form-control {
+    width: 50%;
+
+} */
